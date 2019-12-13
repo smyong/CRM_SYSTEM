@@ -89,6 +89,13 @@ public class RoleService extends BaseService<Role,Integer> {
         role.setIsValid(0);
         AssertUtil.isTrue(update(role)<1,"角色记录删除失败!");
     }
+
+    /**
+     * 角色授权
+     * @param mid  资源模块ID
+     *
+     * @param rid 角色ID
+     */
     public void addGrant(Integer[]mid,Integer rid){
         int count = permissionMapper.countPermissionByRoleId(rid);
         if(count>0){
