@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--Mybatis驼峰命名配置-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>
+    <!-- 批量定义别名 别名为类名 首字母大小写均可-->
+    <typeAliases>
+        <package name="com.shsxt.crm.query"/>
+        <package name="com.shsxt.crm.vo"/>
+    </typeAliases>
+    <!-- Mybatis分页查询插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+</configuration>
