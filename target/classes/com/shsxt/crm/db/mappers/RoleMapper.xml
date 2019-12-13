@@ -16,7 +16,7 @@
     select 
     <include refid="Base_Column_List" />
     from t_role
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER} and is_valid=1
   </select>
   <select id="queryAllRoles" resultType="map">
     select id,role_name as roleName from t_role where is_valid=1

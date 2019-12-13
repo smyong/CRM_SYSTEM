@@ -19,7 +19,7 @@
     select
     <include refid="Base_Column_List" />
     from t_user
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER} and is_valid=1
   </select>
   <select id="queryUserByUserName" parameterType="string" resultType="com.shsxt.crm.vo.User">
     select  <include refid="Base_Column_List"/>

@@ -1,17 +1,17 @@
 package com.shsxt.crm.db.dao;
 
+import com.shsxt.base.BaseMapper;
 import com.shsxt.crm.vo.Customer;
 
-public interface CustomerMapper {
-    int deleteByPrimaryKey(Integer id);
+import java.util.List;
 
-    int insert(Customer record);
+public interface CustomerMapper extends BaseMapper<Customer,Integer> {
 
-    int insertSelective(Customer record);
+    Customer queryCustomerByName(String name);
 
-    Customer selectByPrimaryKey(Integer id);
+    public List<Customer> queryLossCustomers();
 
-    int updateByPrimaryKeySelective(Customer record);
+    int updateStateBatch(Integer[] ids);
 
-    int updateByPrimaryKey(Customer record);
+    Customer queryCustomerByCusNo(String cusNo);
 }

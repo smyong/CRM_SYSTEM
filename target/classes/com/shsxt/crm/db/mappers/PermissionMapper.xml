@@ -16,7 +16,7 @@
     select 
     <include refid="Base_Column_List" />
     from t_permission
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER} and is_valid=1
   </select>
   <delete id="deleteByRoleId" parameterType="int" >
     delete from t_permission
